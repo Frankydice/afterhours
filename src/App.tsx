@@ -121,7 +121,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#07070a] text-white flex flex-col selection:bg-[#ff5d38] selection:text-white">
+    <div className="min-h-screen bg-[#f8f9fa] text-[#09090b] flex flex-col selection:bg-[#ff5d38] selection:text-white">
       {/* Top Navbar */}
       <Header
         marketStatus={marketStatus}
@@ -147,7 +147,7 @@ export const App: React.FC = () => {
           />
         </section>
 
-        {/* Center Column: Agent Reasoning Terminal (5 cols) */}
+        {/* Center Column: Agent Reasoning Terminal (4 cols) */}
         <section className="lg:col-span-4 h-[720px]">
           <AgentTerminal
             selectedCatalyst={selectedCatalyst}
@@ -168,21 +168,21 @@ export const App: React.FC = () => {
       </main>
 
       {/* Footer Info */}
-      <footer className="border-t border-[#1a1a24] bg-[#09090d] py-3 px-6 text-center text-xs font-mono text-[#6c6c7d] flex flex-col sm:flex-row items-center justify-between gap-2">
+      <footer className="border-t border-[#e5e7eb] bg-white py-3.5 px-6 text-center text-xs font-mono text-[#71717a] flex flex-col sm:flex-row items-center justify-between gap-2 shadow-2xs">
         <div className="flex items-center gap-2">
           <span>RUNTIME AGENT WEEK 2026</span>
           <span>•</span>
-          <span className="text-white font-bold">AFTERHOURS AGENT</span>
+          <span className="text-[#09090b] font-bold">AFTERHOURS AGENT</span>
         </div>
-        <div>
+        <div className="flex items-center gap-1.5 flex-wrap">
           <span>Tracks: </span>
-          <strong className="text-[#ff5d38]">Bankr Grand Prize ($20k)</strong>
-          <span> • </span>
-          <strong className="text-amber-400">Definitive Flash</strong>
-          <span> • </span>
-          <strong className="text-[#38bdf8]">Dynamic</strong>
-          <span> • </span>
-          <strong className="text-pink-400">Uniswap</strong>
+          <strong className="text-[#09090b]">Bankr Grand Prize ($20k)</strong>
+          <span>•</span>
+          <strong className="text-[#09090b]">Definitive Flash</strong>
+          <span>•</span>
+          <strong className="text-[#09090b]">Dynamic</strong>
+          <span>•</span>
+          <strong className="text-[#09090b]">Uniswap</strong>
         </div>
       </footer>
 

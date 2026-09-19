@@ -3,43 +3,39 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --font-mono: 'JetBrains Mono', monospace;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #070709;
-  color: #f3f4f6;
+  background-color: #f8f9fa;
+  color: #09090b;
   overflow-x: hidden;
 }
 
-/* Custom scrollbars for high-density trading look */
+/* Crisp light scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0d0d12;
+  background: #f1f2f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #252530;
+  background: #d4d7dc;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3e3e4f;
+  background: #b0b4bc;
 }
 
-/* Glass & Neon Gradients */
-.glass-panel {
-  background: rgba(15, 15, 20, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.terminal-glow {
-  box-shadow: 0 0 25px -5px rgba(255, 93, 56, 0.15);
+/* Crisp White Panels with subtle borders */
+.bright-panel {
+  background: #ffffff;
+  border: 1px solid #e2e4e8;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
 }
 
 .mono-nums {
@@ -47,11 +43,11 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-@keyframes pulse-subtle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+/* Hide scrollbar for ticker */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
-.animate-pulse-subtle {
-  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
